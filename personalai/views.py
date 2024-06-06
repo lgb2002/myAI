@@ -4,8 +4,18 @@ from django.utils import timezone
 def introduce(request):
     return render(request, 'personalai/index.html', {})
 
-def email(request):
-    return render(request, 'personalai/email.html', {})
+def location(request):
+    return render(request, 'personalai/location.html', {})
+def device(request):
+    return render(request, 'personalai/device.html', {})
+def personal(request):
+    return render(request, 'personalai/personal.html', {})
+def financial(request):
+    return render(request, 'personalai/financial.html', {})
+def health(request):
+    return render(request, 'personalai/health.html', {})
+def browsing(request):
+    return render(request, 'personalai/browsing.html', {})
 
 def btns_1(request):
     return render(request, 'personalai/btns_1.html', {})
