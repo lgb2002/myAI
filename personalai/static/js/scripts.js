@@ -321,10 +321,18 @@ var options = function(type, height, numbers , color){
   var analytics_1 =  document.getElementsByClassName("analytics_1");
     
   if (analytics_1 != null && typeof(analytics_1) != 'undefined') {
-      var chart = new ApexCharts(analytics_1[0], options("area" , '51px' , numArr(10,99) , '#4fd1c5')); 
-      var chart_1 = new ApexCharts(analytics_1[1], options("area" , '51px' , numArr(10,99) , '#4c51bf')); 
+      var chart = new ApexCharts(analytics_1[0], options("area" , '201px' , numArr(10,99) , '#4fd1c5'));
+      var chart_1 = new ApexCharts(analytics_1[1], options("area" , '201px' , numArr(50,80) , '#4c51bf'));
       chart.render();       
-      chart_1.render();       
+      chart_1.render();
+      var chart_2 = new ApexCharts(analytics_1[2], options("area" , '201px' , numArr(70,99) , '#4fd1c5'));
+      var chart_3 = new ApexCharts(analytics_1[3], options("area" , '201px' , numArr(30,40) , '#4c51bf'));
+      chart_2.render();
+      chart_3.render();
+      var chart_4 = new ApexCharts(analytics_1[4], options("area" , '201px' , numArr(50,99) , '#4fd1c5'));
+      var chart_5 = new ApexCharts(analytics_1[5], options("area" , '201px' , numArr(35,38) , '#4c51bf'));
+      chart_4.render();
+      chart_5.render();
   }
 
 
