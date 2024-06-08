@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.utils import timezone
+from datetime import datetime
 
 def introduce(request):
+    print("체험판 클릭"+str(datetime.now()))
     return render(request, 'personalai/index.html', {})
 
 def location(request):
@@ -24,6 +26,14 @@ def btns_2(request):
     return render(request, 'personalai/btns_2.html', {})
 
 def landing(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        data = {
+            'name': name,
+            'email': email,
+        }
+        print(str(data)+str(datetime.now()))
     return render(request, 'personalai/landing.html', {})
 
 def alert(request):
@@ -72,6 +82,7 @@ def heading_1(request):
     return render(request, 'personalai/heading_1.html', {})
 
 def index(request):
+    print("체험판 클릭"+str(datetime.now()))
     return render(request, 'personalai/index.html', {})
 
 def introduce_1(request):
